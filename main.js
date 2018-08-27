@@ -197,6 +197,6 @@ app.get("/matches/:summoner", async (req, res) => {
 //   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 // });
 
-http.listen(9000, function() {
-  console.log("Listening on port 9000");
+http.listen(process.env.PORT || 9000, function() {
+  console.log("Listening on port 9000 or process.env.PORT");
 });
