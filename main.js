@@ -1,5 +1,5 @@
 const process = require("process");
-require("dotenv").config();
+// require("dotenv").config();
 const path = require("path");
 const express = require("express");
 const app = express();
@@ -13,7 +13,7 @@ const _ = require("lodash");
 
 const api_key = process.env.RIOT_API_KEY;
 console.log("API_KEY: ", process.env.RIOT_API_KEY);
-const lastXmatches = 2;
+const lastXmatches = process.env.LAST_X_MATCHES || 2;
 
 let summonerJSON, championJSON, itemJSON;
 
